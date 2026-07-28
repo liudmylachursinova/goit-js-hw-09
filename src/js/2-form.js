@@ -8,7 +8,7 @@ const form = document.querySelector(".feedback-form");
 
 function populateForm() {
     const savedData = localStorage.getItem(STORAGE_KEY);
-    if (saveData) {
+    if (savedData) {
         try {
             const parsedData = JSON.parse(savedData);
             formData.email = parsedData.email || "";
@@ -16,7 +16,7 @@ function populateForm() {
             form.elements.email.value = formData.email;
             form.elements.message.value = formData.message;
         } catch (error) {
-            consolez.error(error);
+            console.error(error);
         }
     }
 }
@@ -35,7 +35,7 @@ form.addEventListener("submit", (event) => {
     return;
     }
     console.log("Form Submitted:", formData);
-    ocalStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(STORAGE_KEY);
   formData.email = "";
   formData.message = "";
   form.reset();
