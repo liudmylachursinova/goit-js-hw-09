@@ -17,11 +17,12 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+  display: block !important;
+ margin: 0;
+ padding: 0;
+ background-color: #fff;
+ font-family: "Montserrat", sans-serif;
+ min-height: 100vh;
 }
 
 main {
